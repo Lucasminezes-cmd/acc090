@@ -1,0 +1,678 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <script
+      type="text/javascript"
+      src="https://axzo.yanpam.com/track.js?rtkcmpid=6a171179f15748c64ed88b29"
+    ></script>
+    <script>
+      ;(function () {
+        function getParam(name) {
+          try {
+            return new URL(window.location.href).searchParams.get(name) || ""
+          } catch (e) {
+            return ""
+          }
+        }
+
+        function extractId(value) {
+          if (!value) return ""
+          var parts = value.split("|")
+          return parts.length > 1 ? parts[parts.length - 1] : parts[0]
+        }
+        var utm_source = extractId(getParam("utm_source"))
+        var utm_campaign = extractId(getParam("utm_campaign"))
+        var utm_medium = extractId(getParam("utm_medium"))
+        var utm_content = extractId(getParam("utm_content"))
+        var utm_term = extractId(getParam("utm_term"))
+        if (
+          !utm_source &&
+          !utm_campaign &&
+          !utm_medium &&
+          !utm_content &&
+          !utm_term
+        ) {
+          return
+        }
+        var hopBase = "https://0c82f4mhwi545s4fsbz71jzm31.hop.clickbank.net"
+        var params = [
+          "aff_sub1=" + encodeURIComponent(utm_source),
+          "aff_sub2=" + encodeURIComponent(utm_campaign),
+          "aff_sub3=" + encodeURIComponent(utm_medium),
+          "aff_sub4=" + encodeURIComponent(utm_content),
+          "aff_sub5=" + encodeURIComponent(utm_term),
+          "unique_aff_sub1=" + encodeURIComponent(utm_source),
+          "unique_aff_sub2=" + encodeURIComponent(utm_campaign),
+          "unique_aff_sub3=" + encodeURIComponent(utm_medium),
+          "unique_aff_sub4=" + encodeURIComponent(utm_content),
+          "unique_aff_sub5=" + encodeURIComponent(utm_term),
+        ]
+        var hopUrl = hopBase + "?" + params.join("&")
+        var iframe = document.createElement("iframe")
+        iframe.src = hopUrl
+        iframe.width = "0"
+        iframe.height = "0"
+        iframe.style.cssText =
+          "display:none;width:0;height:0;border:0;position:absolute;left:-9999px;"
+        iframe.setAttribute("tabindex", "-1")
+        iframe.setAttribute("aria-hidden", "true")
+        iframe.setAttribute("title", "")
+        if (document.body) {
+          document.body.appendChild(iframe)
+        } else {
+          document.addEventListener("DOMContentLoaded", function () {
+            document.body.appendChild(iframe)
+          })
+        }
+        console.log("[HopLink] IDs extraídos:", {
+          aff_sub1: utm_source,
+          aff_sub2: utm_campaign,
+          aff_sub3: utm_medium,
+          aff_sub4: utm_content,
+          aff_sub5: utm_term,
+        })
+        console.log("[HopLink] URL:", hopUrl)
+      })()
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>News</title>
+    <meta
+      name="description"
+      content="Join over 50,000 students who transformed their lives with our complete 90-day wellness training program. Guaranteed results or your money back."
+    />
+    <meta property="og:title" content="News" />
+    <meta
+      property="og:description"
+      content="Join over 50,000 students who transformed their lives with our complete 90-day wellness training program."
+    />
+    <meta
+      property="og:image"
+      content="https://bolt.new/static/og_default.png"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="News" />
+    <meta
+      name="twitter:description"
+      content="Join over 50,000 students who transformed their lives with our complete 90-day wellness training program."
+    />
+    <meta
+      name="twitter:image"
+      content="https://bolt.new/static/og_default.png"
+    />
+    <meta name="company-name" content="Nobre Salgados e Lachonetes Ltda" />
+    <meta name="company-phone" content="(81) 9788-2780" />
+    <meta name="company-email" content="compromissocontabil@hotmail.com" />
+    <meta
+      name="company-address"
+      content="R 18 VI Nova 300, Nuc.7, Nº 300, Zona Rural, Petrolina - PE, CEP: 56.300-992"
+    />
+    <meta name="company-number" content="CNPJ: 56.339.628/0001-70" />
+    <style>
+      *,
+      :before,
+      :after {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        border-color: #e5e7eb;
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+      }
+      html {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          sans-serif,
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          Segoe UI Symbol,
+          "Noto Color Emoji";
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        margin: 0;
+        line-height: inherit;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: inherit;
+        font-weight: inherit;
+      }
+      b,
+      strong {
+        font-weight: bolder;
+      }
+      button,
+      input,
+      select,
+      textarea {
+        font-family: inherit;
+        font-size: 100%;
+        font-weight: inherit;
+        line-height: inherit;
+        color: inherit;
+        margin: 0;
+        padding: 0;
+      }
+      button {
+        text-transform: none;
+        -webkit-appearance: button;
+        appearance: button;
+        background-color: transparent;
+        background-image: none;
+        cursor: pointer;
+      }
+      img,
+      svg {
+        display: block;
+      }
+      p {
+        margin: 0;
+      }
+      .pnk-4hv {
+        position: absolute;
+      }
+      .vrb-8ms {
+        position: relative;
+      }
+      .txq-2wd {
+        right: 2rem;
+      }
+      .lcm-6rp {
+        top: 2rem;
+      }
+      .xdj-5nb {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .qvf-3zk {
+        margin-bottom: 0.25rem;
+      }
+      .bkr-9td {
+        margin-bottom: 0.5rem;
+      }
+      .mhc-7xp {
+        margin-bottom: 1.5rem;
+      }
+      .wnj-4qv {
+        margin-bottom: 2rem;
+      }
+      .fzb-2dc {
+        margin-top: 2rem;
+      }
+      .rkn-5hw {
+        display: flex;
+      }
+      .gtv-8bx {
+        height: 0.25rem;
+      }
+      .dpz-3mn {
+        height: 0.75rem;
+      }
+      .jcq-6wt {
+        height: 1rem;
+      }
+      .nxf-7pk {
+        min-height: 100vh;
+      }
+      .bcw-9rj {
+        width: 0.75rem;
+      }
+      .mvd-4hz {
+        width: 1rem;
+      }
+      .qkb-5fn {
+        width: 2rem;
+      }
+      .wzr-8cx {
+        width: 100%;
+      }
+      .tpb-3jd {
+        max-width: 42rem;
+      }
+      .hcm-7vn {
+        max-width: 64rem;
+      }
+      .rjf-2qk {
+        max-width: 72rem;
+      }
+      .ckp-6wb {
+        flex: 1 1 0%;
+      }
+      .dvz-9xt {
+        cursor: pointer;
+      }
+      .gnb-4rh {
+        flex-direction: column;
+      }
+      .mwq-5zj {
+        align-items: center;
+      }
+      .pkd-8cf {
+        justify-content: center;
+      }
+      .xbn-3vt {
+        gap: 0.5rem;
+      }
+      .jrw-7mk {
+        gap: 1.5rem;
+      }
+      .cbf-9hn > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+      }
+      .qrd-2xw {
+        border-radius: 1rem;
+      }
+      .nzk-6bt {
+        border-radius: 9999px;
+      }
+      .hvp-4dm {
+        border-radius: 0.5rem;
+      }
+      .fbn-7cz {
+        background-color: rgb(37 99 235);
+      }
+      .twk-3xq {
+        background-color: rgb(29 78 216);
+      }
+      .mrj-5vb {
+        background-color: rgb(229 231 235);
+      }
+      .pdx-8hn {
+        background-color: rgb(51 65 85);
+      }
+      .bkv-2wf {
+        background-color: #fff;
+      }
+      .zcd-9rp {
+        padding: 2rem 0;
+      }
+      .gxn-4mt {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .vhk-7bj {
+        padding-left: 3rem;
+        padding-right: 3rem;
+      }
+      .qfz-5xd {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+      .rwb-3nc {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+      .mkp-6tz {
+        text-align: center;
+      }
+      .xjb-4hw {
+        font-size: 0.75rem;
+        line-height: 1rem;
+      }
+      .cnr-8vq {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+      .bpd-5mk {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
+      .hzf-7jw {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+      }
+      .qvn-2rx {
+        font-weight: 700;
+      }
+      .dkm-9pb {
+        font-weight: 600;
+      }
+      .wfz-6hc {
+        fill: #2563eb;
+      }
+      .nbt-3xv {
+        color: rgb(37 99 235);
+      }
+      .rkq-8dm {
+        color: rgb(209 213 219);
+      }
+      .zjw-4cn {
+        color: rgb(156 163 175);
+      }
+      .xmb-6fk {
+        color: rgb(107 114 128);
+      }
+      .hpd-9rz {
+        color: rgb(30 41 59);
+      }
+      .vck-3wj {
+        color: #fff;
+      }
+      .gbm-7dx {
+        text-decoration-line: underline;
+      }
+      .npf-4qv {
+        --tw-shadow:
+          0 10px 15px -3px rgb(0 0 0/0.1), 0 4px 6px -4px rgb(0 0 0/0.1);
+        box-shadow:
+          var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+      }
+      .bxz-8hd {
+        transition-property:
+          color, background-color, border-color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 0.15s;
+      }
+      .qnk-5rb {
+        transition-duration: 0.2s;
+      }
+      .mvw-2zf:hover {
+        background-color: rgb(30 64 175);
+      }
+      .fkb-9td:hover {
+        color: #fff;
+      }
+      .jhp-3wm {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        background: #000;
+      }
+      #m4x-over {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 50;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+      }
+      #m4x-over.pzd-7kc {
+        display: flex;
+      }
+      #b9r-wrap {
+        background: #fff;
+        border-radius: 1rem;
+        max-width: 42rem;
+        width: 100%;
+        max-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+      }
+      #h2k-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.25rem 1.5rem;
+        border-bottom: 1px solid #e5e7eb;
+        flex-shrink: 0;
+      }
+      #t5p-titl {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: rgb(30 41 59);
+        margin: 0;
+      }
+      #c7n-shut {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: rgb(107 114 128);
+        font-size: 1.5rem;
+        line-height: 1;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+      }
+      #c7n-shut:hover {
+        color: rgb(30 41 59);
+        background: rgb(243 244 246);
+      }
+      #d3w-body {
+        overflow-y: auto;
+        padding: 1.5rem;
+        color: rgb(71 85 105);
+        font-size: 0.875rem;
+        line-height: 1.7;
+      }
+      #d3w-body h2 {
+        font-size: 0.9375rem;
+        font-weight: 700;
+        color: rgb(30 41 59);
+        margin: 1.25rem 0 0.4rem;
+      }
+      #d3w-body h2:first-child {
+        margin-top: 0;
+      }
+      #d3w-body p {
+        margin-bottom: 0.75rem;
+      }
+      #d3w-body ul {
+        list-style: disc;
+        padding-left: 1.5rem;
+        margin-bottom: 0.75rem;
+      }
+      #d3w-body ul li {
+        margin-bottom: 0.25rem;
+      }
+      #d3w-body .vtj-6nb {
+        font-size: 0.75rem;
+        color: rgb(156 163 175);
+        margin-bottom: 1.25rem;
+      }
+      #d3w-body .xkw-5qd {
+        margin-bottom: 1rem;
+      }
+      #d3w-body .rmd-8tz {
+        font-weight: 700;
+        color: rgb(30 41 59);
+        font-size: 0.8125rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="nxf-7pk mrj-5vb rkn-5hw gnb-4rh">
+        <main class="ckp-6wb rkn-5hw mwq-5zj pkd-8cf gxn-4mt rwb-3nc">
+          <div class="bkv-2wf qrd-2xw npf-4qv tpb-3jd wzr-8cx zcd-9rp vrb-8ms">
+            <div class="pnk-4hv lcm-6rp txq-2wd rkn-5hw mwq-5zj xbn-3vt">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="mvd-4hz jcq-6wt nbt-3xv wfz-6hc"
+              >
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <div class="qkb-5fn gtv-8bx fbn-7cz nzk-6bt"></div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="bcw-9rj dpz-3mn nbt-3xv wfz-6hc"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+            </div>
+            <div class="mkp-6tz fzb-2dc">
+              <h1 class="hzf-7jw qvn-2rx hpd-9rz bkr-9td">
+                Watch the tutorial
+              </h1>
+              <h2 class="hzf-7jw qvn-2rx hpd-9rz wnj-4qv">FOR FREE!</h2>
+              <p class="xmb-6fk wnj-4qv">Click the button below.</p>
+              <div>
+                <a
+                  href="https://axzo.yanpam.com/preclick"
+                  class="twk-3xq mvw-2zf vck-3wj dkm-9pb vhk-7bj qfz-5xd hvp-4dm bpd-5mk bxz-8hd qnk-5rb dvz-9xt"
+                >
+                  CLICK HERE TO WATCH
+                </a>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="pdx-8hn vck-3wj rwb-3nc">
+          <div class="rjf-2qk xdj-5nb gxn-4mt">
+            <div class="mkp-6tz mhc-7xp">
+              <h3 class="bpd-5mk dkm-9pb bkr-9td">
+                Nobre Salgados e Lachonetes Ltda
+              </h3>
+              <p class="cnr-8vq rkq-8dm qvf-3zk">
+                R 18 VI Nova 300, Nuc.7, Nº 300, Zona Rural, Petrolina - PE,
+                CEP: 56.300-992
+              </p>
+              <p class="cnr-8vq rkq-8dm">
+                <span class="dkm-9pb">Email:</span>
+                compromissocontabil@hotmail.com |
+                <span class="dkm-9pb">Phone:</span> (81) 9788-2780
+              </p>
+            </div>
+            <div class="rkn-5hw pkd-8cf jrw-7mk wnj-4qv cnr-8vq">
+              <button
+                class="rkq-8dm fkb-9td gbm-7dx bxz-8hd"
+                onclick="openModal('privacy')"
+              >
+                Privacy Policy
+              </button>
+              <span class="xmb-6fk">|</span>
+              <button
+                class="rkq-8dm fkb-9td gbm-7dx bxz-8hd"
+                onclick="openModal('terms')"
+              >
+                Terms of Use
+              </button>
+              <span class="xmb-6fk">|</span>
+              <button
+                class="rkq-8dm fkb-9td gbm-7dx bxz-8hd"
+                onclick="openModal('contact')"
+              >
+                Contact
+              </button>
+            </div>
+            <div class="xjb-4hw zjw-4cn mkp-6tz cbf-9hn hcm-7vn xdj-5nb">
+              <p>
+                &copy; 2026 Nobre Salgados e Lachonetes Ltda. All rights
+                reserved. No portion of this website — including text, images,
+                or other materials — may be copied, republished, or distributed
+                in any form without prior written authorization.
+              </p>
+              <p>
+                This website operates independently and has no affiliation with,
+                sponsorship from, or connection to Google&#8482;,
+                YouTube&#8482;, or their parent companies. All brand names and
+                trademarks referenced herein belong to their respective holders.
+              </p>
+              <p>
+                The content on this website has not been reviewed or approved by
+                any governmental health authority, including the FDA or EFSA. It
+                is presented for general informational purposes only and should
+                not be taken as medical guidance or professional health advice.
+                Nothing here is intended to diagnose, treat, prevent, or cure
+                any health condition. Always speak with a licensed healthcare
+                provider before making changes to your diet, supplementation, or
+                wellness routine — especially if you are pregnant,
+                breastfeeding, on medication, or managing a health condition.
+              </p>
+              <p>
+                Results depicted or described on this site are not guaranteed
+                and will differ from person to person. Factors such as
+                lifestyle, genetics, physical activity, and overall health all
+                influence outcomes. Nothing presented here should be interpreted
+                as a promise of specific results. Where applicable, identifying
+                information has been altered to safeguard personal privacy.
+              </p>
+              <p>
+                In accordance with FTC guidelines on endorsements (16 CFR Part
+                255): all testimonials featured on this site represent the
+                honest, unsolicited experiences of real individuals and were
+                shared without any form of compensation or incentive. These
+                accounts reflect personal outcomes only and are not
+                representative of what every user can expect. All information is
+                shared in good faith based on the author's perspective. We
+                strongly encourage independent research and consultation with
+                qualified professionals before making any decisions based on
+                content found here.
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div id="m4x-over" onclick="if (event.target === this) closeModal()">
+      <div id="b9r-wrap">
+        <div id="h2k-head">
+          <h2 id="t5p-titl"></h2>
+          <button id="c7n-shut" onclick="closeModal()" aria-label="Close">
+            &#x2715;
+          </button>
+        </div>
+        <div id="d3w-body"></div>
+      </div>
+    </div>
+    <script>
+      var contents = {
+        privacy: {
+          title: "Privacy Policy",
+          html: '<p class="vtj-6nb">Effective date: March 2024</p><h2>1. Our Commitment</h2><p>At Nobre Salgados e Lachonetes Ltda, protecting the personal information of our visitors is a core responsibility. This notice explains what data we may collect, how it is used, and the choices available to you.</p><h2>2. Information We May Gather</h2><p>When you browse or interact with our website, we may collect the following categories of information:</p><ul><li><strong>Identity details:</strong> full name or username</li><li><strong>Communication details:</strong> email address, phone number, mailing address</li><li><strong>Payment details:</strong> credit or debit card information processed securely</li><li><strong>Order history:</strong> records of transactions completed through our platform</li><li><strong>Device information:</strong> browser version, IP address, operating system, language settings</li><li><strong>Usage patterns:</strong> pages visited, time spent, clicks and interactions</li><li><strong>Communication preferences:</strong> whether you opted in or out of marketing messages</li></ul><h2>3. Why We Use Your Data</h2><p>Your information is processed only when there is a valid legal basis to do so. Typical reasons include:</p><ul><li>Processing and fulfilling your orders or reservations</li><li>Providing customer support and account management</li><li>Communicating updates related to your purchases</li><li>Improving the quality and functionality of our services</li><li>Sending marketing communications you have agreed to receive</li><li>Identifying and preventing fraudulent or abusive behavior</li></ul><h2>4. How We Protect Your Information</h2><p>We apply appropriate technical and administrative measures to guard your data against unauthorized access, alteration, or loss. Only those with a genuine need to handle your data — whether employees or contracted service providers — are permitted to do so.</p><h2>5. Retention Period</h2><p>We store personal data for as long as required to fulfill the purposes outlined here, or as mandated by applicable legislation, including tax and financial record-keeping rules. Once no longer necessary, data is securely deleted or anonymized.</p><h2>6. Rights Available to You</h2><p>Depending on your location and applicable law, you may be entitled to:</p><ul><li>Request a copy of your personal data</li><li>Ask us to update or correct your information</li><li>Request that we erase your data under certain conditions</li><li>Restrict or object to specific ways we process your data</li><li>Receive your data in a portable format</li><li>Revoke previously given consent at any time</li></ul><h2>7. Cookie Usage</h2><p>Our website may place small text files (cookies) on your device to support basic functionality and improve your browsing experience. You may adjust cookie preferences in your browser settings, though some features may be affected.</p><h2>8. Links to Other Websites</h2><p>This site may include links pointing to external platforms we do not operate. We are not accountable for the privacy practices of those third parties and recommend reviewing their own policies.</p><h2>9. Changes to This Notice</h2><p>This privacy notice may be updated from time to time. Any revisions will appear on this page along with a new effective date. Continuing to use our services after an update signals your acceptance of the revised terms.</p><h2>10. Getting in Touch</h2><p>If you have questions or requests related to this privacy notice, please contact us through the details listed on our website.</p>',
+        },
+        terms: {
+          title: "Terms of Use",
+          html: '<p class="vtj-6nb">Effective date: March 2024</p><h2>1. Agreement to These Terms</h2><p>By visiting or using this website, you acknowledge that you have read these Terms of Use in full and agree to comply with them. If you disagree with any part, please discontinue use of our services immediately.</p><h2>2. Permitted Use</h2><p>We grant visitors a limited, personal, non-transferable right to access and browse the content on this website for non-commercial purposes only. This right does not permit you to:</p><ul><li>Copy, modify, or redistribute our content</li><li>Use materials for advertising or commercial gain</li><li>Reverse engineer or tamper with any software or system on the site</li><li>Strip or alter copyright and ownership notices</li><li>Host or republish our content on any other platform</li></ul><h2>3. Access to Services</h2><p>Upon completing a purchase, you will be granted access to the relevant digital content or service. Access credentials will be sent to the email address provided at checkout. You are solely responsible for maintaining the security of your login details.</p><h2>4. Satisfaction Guarantee</h2><p>We stand behind our offerings with a 30-day money-back guarantee. Should you be unsatisfied for any reason within that period, contact our support team with your order details and we will process a full refund.</p><h2>5. Your Account</h2><p>When creating an account, you agree to provide accurate, current, and complete information. You are entirely responsible for any activity that occurs under your credentials and must notify us immediately of any unauthorized use.</p><h2>6. Ownership of Content</h2><p>All text, images, videos, and other materials published on this website are the exclusive property of Nobre Salgados e Lachonetes Ltda, protected by intellectual property laws. Content is provided for personal viewing only and may not be reproduced or distributed without written permission.</p><h2>7. Unacceptable Use</h2><p>You must not use this website in any way that:</p><ul><li>Breaks or encourages the breaking of any law or regulation</li><li>Infringes on the rights of third parties</li><li>Involves deceptive, misleading, or harmful conduct</li><li>Introduces viruses, malware, or other disruptive code</li><li>Interferes with the normal operation of the platform</li></ul><h2>8. Disclaimer of Warranties</h2><p>All content is made available on a strictly "as available" basis. We make no representations or warranties of any kind — express or implied — regarding accuracy, reliability, or fitness for any particular use.</p><h2>9. Liability Cap</h2><p>To the fullest extent permitted by law, Nobre Salgados e Lachonetes Ltda will not be held responsible for any indirect, incidental, special, or consequential loss arising from your use of — or inability to use — this website or its content.</p><h2>10. Applicable Law</h2><p>These Terms are subject to the laws of the territory in which Nobre Salgados e Lachonetes Ltda is registered and operates, without regard to conflict-of-law provisions.</p><h2>11. Contact Us</h2><p>For any questions about these Terms, reach out to us through the contact information available on this website.</p>',
+        },
+        contact: {
+          title: "Contact",
+          html: '<p>We welcome your questions and feedback. Get in touch with us through any of the options below — our team will respond as promptly as possible.</p><div class="xkw-5qd"><div class="rmd-8tz">Business Name</div><p>Nobre Salgados e Lachonetes Ltda</p></div><div class="xkw-5qd"><div class="rmd-8tz">E-mail</div><p><a href="mailto:compromissocontabil@hotmail.com" style="color:rgb(29 78 216)">compromissocontabil@hotmail.com</a></p></div><div class="xkw-5qd"><div class="rmd-8tz">Phone</div><p>(81) 9788-2780</p></div><div class="xkw-5qd"><div class="rmd-8tz">Location</div><p>R 18 VI Nova 300, Nuc.7, Nº 300, Zona Rural, Petrolina - PE, CEP: 56.300-992</p></div><div class="xkw-5qd"><div class="rmd-8tz">Tax ID</div><p>CNPJ: 56.339.628/0001-70</p></div>',
+        },
+      }
+
+      function openModal(key) {
+        var c = contents[key]
+        document.getElementById("t5p-titl").textContent = c.title
+        document.getElementById("d3w-body").innerHTML = c.html
+        document.getElementById("d3w-body").scrollTop = 0
+        document.getElementById("m4x-over").classList.add("pzd-7kc")
+        document.body.style.overflow = "hidden"
+      }
+
+      function closeModal() {
+        document.getElementById("m4x-over").classList.remove("pzd-7kc")
+        document.body.style.overflow = ""
+      }
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeModal()
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Política de Privacidade | Nobre Salgados</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --yellow: #ffd600;
+        --red: #d32f2f;
+        --dark: #1a0a00;
+        --mid: #2d1500;
+        --light: #fffdf0;
+        --warm: #fff8e1;
+        --muted: #8d6e63;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background: var(--light);
+        color: var(--dark);
+        overflow-x: hidden;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 200;
+        background: var(--dark);
+        padding: 0.9rem 5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 4px solid var(--yellow);
+      }
+      .nav-brand {
+        font-family: "Righteous", sans-serif;
+        font-size: 1.5rem;
+        color: var(--yellow);
+        letter-spacing: 0.06em;
+        text-decoration: none;
+      }
+      .nav-brand span {
+        color: white;
+      }
+      .nav-back {
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.55);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .nav-back:hover {
+        color: var(--yellow);
+      }
+
+      .page-header {
+        padding-top: 73px;
+        background: var(--dark);
+        padding-bottom: 3rem;
+        border-bottom: 4px solid var(--yellow);
+      }
+      .page-header-inner {
+        padding: 3rem 5rem 0;
+      }
+      .ph-label {
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--yellow);
+        margin-bottom: 0.5rem;
+      }
+      .ph-title {
+        font-family: "Righteous", sans-serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+        color: white;
+        letter-spacing: 0.04em;
+      }
+      .ph-title span {
+        color: var(--yellow);
+      }
+      .ph-meta {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.35);
+        margin-top: 0.8rem;
+      }
+
+      .content {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+      }
+
+      .section {
+        margin-bottom: 2.5rem;
+      }
+
+      .section h2 {
+        font-family: "Righteous", sans-serif;
+        font-size: 1.1rem;
+        color: var(--dark);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        border-left: 4px solid var(--yellow);
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .section p {
+        font-size: 0.92rem;
+        color: var(--muted);
+        line-height: 1.9;
+        margin-bottom: 0.8rem;
+      }
+
+      .section ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0.8rem;
+      }
+
+      .section ul li {
+        font-size: 0.92rem;
+        color: var(--muted);
+        line-height: 1.8;
+        padding-left: 1.2rem;
+        position: relative;
+      }
+
+      .section ul li::before {
+        content: "—";
+        position: absolute;
+        left: 0;
+        color: var(--yellow);
+        font-weight: 700;
+      }
+
+      .highlight-box {
+        background: var(--dark);
+        border-top: 4px solid var(--yellow);
+        padding: 1.5rem 2rem;
+        margin: 1rem 0;
+      }
+
+      .highlight-box p {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.88rem;
+        margin: 0;
+      }
+
+      .highlight-box strong {
+        color: var(--yellow);
+      }
+
+      .contact-block {
+        background: var(--warm);
+        border-left: 4px solid var(--red);
+        padding: 1.5rem 2rem;
+        margin-top: 1rem;
+      }
+
+      .contact-block p {
+        font-size: 0.88rem;
+        color: var(--dark);
+        margin-bottom: 0.4rem;
+      }
+
+      .contact-block strong {
+        color: var(--red);
+      }
+
+      .divider {
+        height: 2px;
+        background: linear-gradient(to right, var(--yellow), transparent);
+        margin: 2rem 0;
+      }
+
+      footer {
+        background: var(--dark);
+        border-top: 4px solid var(--yellow);
+        padding: 1.2rem 5rem;
+        display: flex;
+        justify-content: space-between;
+      }
+      footer span {
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.25);
+      }
+      footer a {
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.25);
+        text-decoration: none;
+      }
+      footer a:hover {
+        color: var(--yellow);
+      }
+
+      @media (max-width: 900px) {
+        nav,
+        footer {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+        }
+        .page-header-inner {
+          padding: 2rem 1.5rem 0;
+        }
+        .content {
+          padding: 2.5rem 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="nav-brand">NOBRE<span> SALGADOS</span></a>
+      <a href="/" class="nav-back">← Voltar ao site</a>
+    </nav>
+
+    <header class="page-header">
+      <div class="page-header-inner">
+        <div class="ph-label">Documentos legais</div>
+        <h1 class="ph-title">POLÍTICA DE <span>PRIVACIDADE</span></h1>
+        <p class="ph-meta">
+          Última atualização: abril de 2026 · Nobre Salgados e Lachonetes Ltda
+        </p>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="section">
+        <p>
+          A <strong>Nobre Salgados e Lachonetes Ltda</strong> (CNPJ
+          56.339.628/0001-70), com sede na Rua 18 VI Nova 300, Núcleo
+          7/Massangano, Zona Rural — Petrolina/PE, respeita sua privacidade e
+          está comprometida com a proteção dos seus dados pessoais, em
+          conformidade com a
+          <strong
+            >Lei Geral de Proteção de Dados (Lei nº 13.709/2018 — LGPD)</strong
+          >.
+        </p>
+        <p>
+          Esta Política descreve quais dados coletamos, como os utilizamos e
+          quais são seus direitos como titular.
+        </p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="section">
+        <h2>1. Dados que coletamos</h2>
+        <p>
+          Podemos coletar os seguintes dados pessoais quando você entra em
+          contato conosco ou utiliza nossos serviços:
+        </p>
+        <ul>
+          <li>Nome completo</li>
+          <li>Número de telefone (WhatsApp ou ligação)</li>
+          <li>Endereço de entrega (para pedidos de delivery)</li>
+          <li>Endereço de e-mail (quando fornecido)</li>
+          <li>Histórico de pedidos e preferências</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>2. Como usamos seus dados</h2>
+        <p>
+          Utilizamos seus dados exclusivamente para finalidades legítimas e
+          necessárias ao funcionamento do negócio:
+        </p>
+        <ul>
+          <li>Processar e entregar seus pedidos</li>
+          <li>Entrar em contato para confirmar ou informar sobre pedidos</li>
+          <li>Responder dúvidas e solicitações</li>
+          <li>Cumprir obrigações legais e fiscais</li>
+        </ul>
+        <p>
+          Seus dados não são utilizados para decisões automatizadas ou perfis de
+          consumo sem sua ciência.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>3. Compartilhamento de dados</h2>
+        <p>
+          Não vendemos, alugamos ou compartilhamos seus dados pessoais com
+          terceiros para fins comerciais. O compartilhamento ocorre apenas nas
+          seguintes situações:
+        </p>
+        <ul>
+          <li>
+            Entregadores parceiros, restrito ao endereço e nome necessários para
+            a entrega
+          </li>
+          <li>Cumprimento de obrigação legal ou ordem judicial</li>
+          <li>Órgãos fiscais e regulatórios conforme exigido por lei</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>4. Armazenamento e segurança</h2>
+        <p>
+          Seus dados são mantidos em dispositivos de uso interno com acesso
+          restrito. Adotamos medidas razoáveis para proteger as informações
+          contra acesso não autorizado, perda ou destruição.
+        </p>
+        <div class="highlight-box">
+          <p>
+            Os dados são <strong>retidos pelo tempo necessário</strong> para
+            cumprir a finalidade da coleta ou para atender obrigações legais, e
+            depois são descartados de forma segura.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>5. Cookies e rastreamento</h2>
+        <p>
+          Este site é uma página estática informativa. Não utilizamos cookies
+          próprios de rastreamento, ferramentas de análise comportamental ou
+          publicidade direcionada. Fontes externas (Google Fonts) podem carregar
+          recursos de terceiros sujeitos às suas próprias políticas.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>6. Seus direitos (LGPD)</h2>
+        <p>Como titular de dados, você tem direito a:</p>
+        <ul>
+          <li>Confirmar se tratamos dados seus</li>
+          <li>Acessar os dados que temos sobre você</li>
+          <li>Corrigir dados incompletos, inexatos ou desatualizados</li>
+          <li>
+            Solicitar a anonimização, bloqueio ou eliminação de dados
+            desnecessários
+          </li>
+          <li>Revogar consentimento a qualquer momento</li>
+          <li>Portabilidade dos dados a outro fornecedor</li>
+          <li>Reclamar à Autoridade Nacional de Proteção de Dados (ANPD)</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>7. Base legal para o tratamento</h2>
+        <p>
+          O tratamento dos seus dados ocorre com fundamento nas seguintes bases
+          legais previstas na LGPD (art. 7º):
+        </p>
+        <ul>
+          <li>
+            <strong>Execução de contrato</strong> — para processar e entregar
+            seus pedidos
+          </li>
+          <li>
+            <strong>Legítimo interesse</strong> — para comunicação relacionada
+            ao pedido
+          </li>
+          <li>
+            <strong>Cumprimento de obrigação legal</strong> — para fins fiscais
+            e regulatórios
+          </li>
+          <li>
+            <strong>Consentimento</strong> — quando você nos fornece dados
+            voluntariamente
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>8. Contato e exercício de direitos</h2>
+        <p>
+          Para exercer seus direitos, tirar dúvidas ou solicitar a exclusão dos
+          seus dados, entre em contato conosco:
+        </p>
+        <div class="contact-block">
+          <p><strong>Empresa:</strong> Nobre Salgados e Lachonetes Ltda</p>
+          <p><strong>CNPJ:</strong> 56.339.628/0001-70</p>
+          <p><strong>Telefone / WhatsApp:</strong> (81) 9788-2780</p>
+          <p><strong>E-mail:</strong> compromissocontabil@hotmail.com</p>
+          <p>
+            <strong>Endereço:</strong> R 18 VI Nova 300, Nuc.7 — Zona Rural,
+            Petrolina/PE · CEP 56.300-992
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>9. Alterações nesta política</h2>
+        <p>
+          Esta Política pode ser atualizada periodicamente. Alterações
+          relevantes serão comunicadas por nossos canais de atendimento.
+          Recomendamos consultar esta página regularmente.
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <span>CNPJ: 56.339.628/0001-70 · Nobre Salgados e Lachonetes Ltda</span>
+      <a href="index.html">← Voltar ao site</a>
+    </footer>
+  </body>
+</html>

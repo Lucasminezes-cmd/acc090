@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nobre Salgados | Lanchonete · Petrolina - PE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --yellow: #ffd600;
+            --red: #d32f2f;
+            --dark: #1a0a00;
+            --mid: #2d1500;
+            --light: #fffdf0;
+            --warm: #fff8e1;
+            --muted: #8d6e63;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; background: var(--light); color: var(--dark); overflow-x: hidden; }
+
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 200;
+            background: var(--dark); padding: 0.9rem 5rem;
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 4px solid var(--yellow);
+        }
+        .nav-brand { font-family: 'Righteous', sans-serif; font-size: 1.5rem; color: var(--yellow); letter-spacing: 0.06em; }
+        .nav-brand span { color: white; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--yellow); }
+
+        .hero {
+            padding-top: 73px; min-height: 95vh;
+            background: var(--yellow);
+            display: grid; grid-template-columns: 1fr 1fr;
+            align-items: center; position: relative; overflow: hidden;
+        }
+        .hero::before { content: ''; position: absolute; inset: 0; background: repeating-radial-gradient(circle at 50% 50%, transparent 0, transparent 40px, rgba(0,0,0,0.015) 40px, rgba(0,0,0,0.015) 41px); }
+        .hero-left { padding: 5rem; position: relative; z-index: 1; }
+        .hero-kicker { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.8rem; }
+        .hero-kicker::before { content: ''; width: 24px; height: 3px; background: var(--red); }
+        h1 { font-family: 'Righteous', sans-serif; font-size: clamp(3.5rem, 6vw, 6rem); color: var(--dark); line-height: 1.0; margin-bottom: 1.5rem; letter-spacing: 0.02em; }
+        h1 span { color: var(--red); }
+        .hero-p { font-size: 1rem; font-weight: 400; color: rgba(0,0,0,0.6); line-height: 1.8; max-width: 400px; margin-bottom: 2.5rem; }
+        .btn-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .btn-main { background: var(--dark); color: var(--yellow); padding: 0.9rem 2.5rem; font-family: 'Righteous', sans-serif; font-size: 1rem; letter-spacing: 0.08em; text-decoration: none; transition: background 0.2s; }
+        .btn-main:hover { background: var(--red); color: white; }
+        .btn-sec { background: white; color: var(--dark); padding: 0.9rem 2.5rem; font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+        .btn-sec:hover { background: var(--red); color: white; }
+        .hero-right { display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; }
+        .salgado-wrap { text-align: center; }
+        .salgado-ico { font-size: 9rem; display: block; animation: bounce-in 0.8s ease-out, pop 3s ease-in-out infinite 0.8s; }
+        @keyframes bounce-in { 0%{transform:scale(0) rotate(-20deg);} 80%{transform:scale(1.1) rotate(5deg);} 100%{transform:scale(1) rotate(0);} }
+        @keyframes pop { 0%,100%{transform:scale(1);} 50%{transform:scale(1.06);} }
+        .status-badge { display: inline-block; margin-top: 1.5rem; background: var(--dark); color: var(--yellow); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; padding: 0.5rem 1.5rem; }
+
+        .diagonal { height: 70px; background: var(--dark); clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 100%); }
+
+        .menu { padding: 5rem; background: var(--dark); }
+        .m-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--yellow); margin-bottom: 0.5rem; }
+        .m-title { font-family: 'Righteous', sans-serif; font-size: clamp(2rem, 4vw, 3rem); color: white; margin-bottom: 3rem; letter-spacing: 0.04em; }
+        .m-title span { color: var(--yellow); }
+        .m-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(255,215,0,0.1); }
+        .m-card { background: var(--mid); padding: 2.5rem 2rem; transition: background 0.3s; }
+        .m-card:hover { background: var(--red); }
+        .m-ico { font-size: 2.5rem; display: block; margin-bottom: 1rem; }
+        .m-card h3 { font-family: 'Righteous', sans-serif; font-size: 1.1rem; color: var(--yellow); margin-bottom: 0.6rem; letter-spacing: 0.04em; transition: color 0.3s; }
+        .m-card:hover h3 { color: white; }
+        .m-card p { font-size: 0.85rem; color: rgba(255,255,255,0.45); line-height: 1.7; }
+
+        .about { padding: 5rem; background: var(--warm); display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+        .a-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--red); margin-bottom: 0.5rem; }
+        .a-title { font-family: 'Righteous', sans-serif; font-size: clamp(2rem,3.5vw,2.8rem); color: var(--dark); margin-bottom: 1.5rem; letter-spacing: 0.02em; }
+        .a-p { font-size: 0.92rem; color: var(--muted); line-height: 1.9; margin-bottom: 1rem; }
+        .a-badge { display: inline-block; background: var(--red); color: white; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.5rem 1.5rem; }
+        .data-box { background: var(--dark); padding: 2.5rem; border-top: 4px solid var(--yellow); }
+        .dr { display: flex; justify-content: space-between; padding: 0.7rem 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+        .dr:last-child { border: none; }
+        .dk { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+        .dv { font-size: 0.88rem; color: rgba(255,255,255,0.8); }
+        .dv.ok { color: var(--yellow); font-weight: 600; }
+
+        .contact { background: var(--red); padding: 4rem 5rem; text-align: center; }
+        .contact h2 { font-family: 'Righteous', sans-serif; font-size: 2.5rem; color: white; margin-bottom: 0.5rem; letter-spacing: 0.04em; }
+        .contact p { color: rgba(255,255,255,0.65); margin-bottom: 2rem; }
+        .c-pills { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .cpill { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); color: white; padding: 0.75rem 1.8rem; font-size: 0.88rem; font-weight: 500; }
+        footer { background: var(--dark); border-top: 4px solid var(--yellow); padding: 1.2rem 5rem; display: flex; justify-content: space-between; align-items: center; }
+        footer span { font-size: 0.72rem; color: rgba(255,255,255,0.25); }
+        footer a { font-size: 0.72rem; color: rgba(255,255,255,0.25); text-decoration: none; transition: color 0.2s; }
+        footer a:hover { color: var(--yellow); }
+        @media(max-width:900px) { .hero,.about{grid-template-columns:1fr;} .m-grid{grid-template-columns:1fr;} nav,.menu,.about,.contact,footer{padding-left:1.5rem;padding-right:1.5rem;} .hero-left{padding:6rem 1.5rem 3rem;} .hero-right{min-height:50vh;} .nav-links{display:none;} }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="nav-brand">NOBRE<span> SALGADOS</span></div>
+    <ul class="nav-links">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#menu">Cardápio</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#contact">Contato</a></li>
+    </ul>
+</nav>
+<section class="hero" id="home">
+    <div class="hero-left">
+        <div class="hero-kicker">Petrolina · Pernambuco</div>
+        <h1>SALGADOS<br><span>QUENTINHOS</span><br>TODO DIA</h1>
+        <p class="hero-p">Salgados artesanais, sucos naturais e lanches irresistíveis preparados com carinho em Petrolina - PE. Sabor que faz você voltar sempre!</p>
+        <div class="btn-row">
+            <a href="#contact" class="btn-main">Peça Agora</a>
+            <a href="#menu" class="btn-sec">Ver Cardápio</a>
+        </div>
+    </div>
+    <div class="hero-right">
+        <div class="salgado-wrap">
+            <span class="salgado-ico">🥟</span>
+            <div class="status-badge">✅ CNPJ Ativo</div>
+        </div>
+    </div>
+</section>
+<div class="diagonal"></div>
+<section class="menu" id="menu">
+    <div class="m-label">O que temos</div>
+    <h2 class="m-title">NOSSO <span>CARDÁPIO</span></h2>
+    <div class="m-grid">
+        <div class="m-card"><span class="m-ico">🥟</span><h3>Salgados Artesanais</h3><p>Coxinhas, pastéis, esfirras, quibes e muito mais fresquinhos e crocantes.</p></div>
+        <div class="m-card"><span class="m-ico">🥤</span><h3>Sucos Naturais</h3><p>Frutas da época selecionadas e transformadas em sucos frescos e vitaminados.</p></div>
+        <div class="m-card"><span class="m-ico">☕</span><h3>Café & Bebidas</h3><p>Café quentinho, achocolatado, chá e refrigerantes para acompanhar seu lanche.</p></div>
+        <div class="m-card"><span class="m-ico">🍞</span><h3>Pães & Bolos</h3><p>Pães de queijo, bolos caseiros e roscas fresquinhas saídas direto do forno.</p></div>
+        <div class="m-card"><span class="m-ico">🍔</span><h3>Lanches</h3><p>Sanduíches naturais e lanches variados para saciar a fome em qualquer hora.</p></div>
+        <div class="m-card"><span class="m-ico">🚚</span><h3>Delivery</h3><p>Entregamos quentinho na sua casa ou empresa em Petrolina e região.</p></div>
+    </div>
+</section>
+<section class="about" id="about">
+    <div>
+        <div class="a-label">Nossa história</div>
+        <h2 class="a-title">NOBRE SALGADOS EM PETROLINA</h2>
+        <p class="a-p">Fundada em agosto de 2024, a Nobre Salgados e Lachonetes Ltda chegou à Zona Rural de Petrolina — PE com a missão de levar salgados artesanais de qualidade, sucos naturais e lanches variados para toda a comunidade.</p>
+        <p class="a-p">Com endereço na Rua 18 VI Nova 300, Núcleo 7/Massangano, somos uma lanchonete de bairro com coração grande e muito sabor em cada pedido.</p>
+        <p class="a-p">CNPJ ativo e operações regulares garantem transparência e confiança.</p>
+        <span class="a-badge">✅ CNPJ Ativo · ME · Petrolina/PE</span>
+    </div>
+    <div class="data-box">
+        <div class="dr"><span class="dk">Razão Social</span><span class="dv">Nobre Salgados e Lachonetes Ltda</span></div>
+        <div class="dr"><span class="dk">CNPJ</span><span class="dv">56.339.628/0001-70</span></div>
+        <div class="dr"><span class="dk">Abertura</span><span class="dv">07/08/2024</span></div>
+        <div class="dr"><span class="dk">Situação</span><span class="dv ok">✅ Ativa</span></div>
+        <div class="dr"><span class="dk">Endereço</span><span class="dv">R 18 VI Nova 300, Nuc.7, Nº 300</span></div>
+        <div class="dr"><span class="dk">Bairro</span><span class="dv">Zona Rural</span></div>
+        <div class="dr"><span class="dk">Cidade</span><span class="dv">Petrolina — PE</span></div>
+        <div class="dr"><span class="dk">CEP</span><span class="dv">56.300-992</span></div>
+        <div class="dr"><span class="dk">Telefone</span><span class="dv">(81) 9788-2780</span></div>
+    </div>
+</section>
+<section class="contact" id="contact">
+    <h2>FALE CONOSCO</h2>
+    <p>Pedidos e informações</p>
+    <div class="c-pills">
+        <div class="cpill">📞 (81) 9788-2780</div>
+        <div class="cpill">✉️ compromissocontabil@hotmail.com</div>
+        <div class="cpill">📍 Zona Rural, Petrolina/PE</div>
+    </div>
+</section>
+<footer>
+    <span>CNPJ: 56.339.628/0001-70 · Nobre Salgados e Lachonetes Ltda</span>
+    <span>© 2026 Todos os direitos reservados · <a href="privacidade.html">Política de Privacidade</a></span>
+</footer>
+</body>
+</html>
