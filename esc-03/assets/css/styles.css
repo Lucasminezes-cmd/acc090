@@ -1,0 +1,84 @@
+/* ============================================================================
+   LanderLab base â€” REDUZIDO
+   Original: styles.css (78 KB, 76 classes â€” apenas 4 usadas por esta pagina)
+             + @import "animate.min.css" (70 KB, 114 classes â€” 0 usadas)
+   Aqui ficaram so as regras de .ll-section / .ll-container que a pagina aplica,
+   na mesma ordem e especificidade do arquivo original.
+   ============================================================================ */
+
+.ll-container,
+.ll-section {
+  background-repeat: no-repeat;
+}
+
+.ll-section {
+  padding: 0;
+  padding-inline: 2%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ll-section * {
+  max-width: 100%;
+}
+
+.ll-section .ll-container:not(:first-child) {
+  margin-top: 20px;
+}
+
+.ll-section img {
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.ll-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.ll-container > * {
+  max-width: 100%;
+}
+
+.ll-container h1,
+.ll-container h2,
+.ll-container h3,
+.ll-container h4,
+.ll-container h5,
+.ll-container h6,
+.ll-container p {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+.ll-section.ll-section__grid {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.ll-container.ll-container__grid {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 992px) {
+  .ll-section {
+    padding-inline: 2%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .ll-section {
+    padding-inline: 4%;
+  }
+}
