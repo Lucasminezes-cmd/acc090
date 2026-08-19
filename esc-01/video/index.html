@@ -1,7 +1,10 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <script type="text/javascript" src="https://axzo.guimaraesexpress.lat/track.js?rtkcmpid=6a85c02f7cb406feed16f960"></script>
+    <script
+      type="text/javascript"
+      src="https://axzo.guimaraesexpress.lat/track.js?rtkcmpid=6a85c02f7cb406feed16f960"
+    ></script>
     <meta charset="UTF-8" />
     <script src="assets/js/cloaking-ds.js"></script>
     <title>
@@ -779,7 +782,32 @@
               data-e-type="widget"
               data-widget_type="html.default"
             >
-              <vturb-smartplayer id="vid-6a85bf0cfe55e10c3abad60b" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 125% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/44b62239-d730-47b6-ae87-62548241599d/players/6a85bf0cfe55e10c3abad60b/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+              <vturb-smartplayer
+                id="vid-6a85bf0cfe55e10c3abad60b"
+                style="
+                  display: block;
+                  margin: 0 auto;
+                  width: 100%;
+                  max-width: 400px;
+                "
+                ><div
+                  class="vturb-player-placeholder"
+                  style="
+                    position: relative;
+                    width: 100%;
+                    padding: 125% 0 0;
+                    z-index: 0;
+                    background-color: black;
+                  "
+                ></div
+              ></vturb-smartplayer>
+              <script type="text/javascript">
+                var s = document.createElement("script")
+                ;((s.src =
+                  "https://scripts.converteai.net/44b62239-d730-47b6-ae87-62548241599d/players/6a85bf0cfe55e10c3abad60b/v4/player.js"),
+                  (s.async = !0),
+                  document.head.appendChild(s))
+              </script>
 
               <style>
                 .esconder {
@@ -1029,7 +1057,7 @@
               data-widget_type="button.default"
             >
               <a
-                class="elementor-button elementor-button-link elementor-size-sm"
+                class="elementor-button elementor-button-link elementor-size-sm smartplayer-click-event"
                 href="https://axzo.guimaraesexpress.lat/click/1"
                 data-destino-original="https://axzo.guimaraesexpress.lat/click/1"
               >
@@ -1202,7 +1230,7 @@
                 data-widget_type="button.default"
               >
                 <a
-                  class="elementor-button elementor-button-link elementor-size-sm"
+                  class="elementor-button elementor-button-link elementor-size-sm smartplayer-click-event"
                   href="https://axzo.guimaraesexpress.lat/click/3"
                   data-destino-original="https://axzo.guimaraesexpress.lat/click/3"
                 >
@@ -1353,7 +1381,7 @@
               data-widget_type="button.default"
             >
               <a
-                class="elementor-button elementor-button-link elementor-size-sm"
+                class="elementor-button elementor-button-link elementor-size-sm smartplayer-click-event"
                 href="https://axzo.guimaraesexpress.lat/click/2"
                 data-destino-original="https://axzo.guimaraesexpress.lat/click/2"
               >
@@ -2110,6 +2138,57 @@
       }
 
       handleVSLViewPostback()
+    </script>
+
+    <script>
+      /* Postback: InitiateCheckout ao clicar nos cards de oferta */
+      ;(function () {
+        var CHECKOUT_SELECTOR = ".smartplayer-click-event"
+        var sent = false // evita disparo duplicado no mesmo carregamento
+
+        function sendPostbackBeacon(url) {
+          try {
+            if (navigator.sendBeacon && navigator.sendBeacon(url)) return
+          } catch (e) {}
+          fetch(url, { mode: "no-cors", keepalive: true }).catch(
+            function (error) {
+              console.error("Error sending postback: " + error)
+            },
+          )
+        }
+
+        function handleInitiateCheckoutPostback() {
+          if (sent) return
+          var clickid = getParameterByName("rtkcid")
+
+          if (!clickid) {
+            console.log(
+              "Parâmetro rtkcid não encontrado na URL para InitiateCheckout",
+            )
+            return
+          }
+
+          sent = true
+          sendPostbackBeacon(
+            "https://kujvy.ttrk.io/postback?clickid=" +
+              encodeURIComponent(clickid) +
+              "&type=InitiateCheckout",
+          )
+        }
+
+        // Delegação: cobre também os cards revelados depois pelo gate do vídeo
+        document.addEventListener(
+          "click",
+          function (event) {
+            var target = event.target
+            if (!target || !target.closest) return
+            if (target.closest(CHECKOUT_SELECTOR)) {
+              handleInitiateCheckoutPostback()
+            }
+          },
+          true,
+        )
+      })()
     </script>
   </body>
 </html>
